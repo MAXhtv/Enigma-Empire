@@ -10,7 +10,7 @@ function verificarPalavra() {
   for(let id in solucoes) {
     let inputElement=document.getElementById(id)
     if (inputElement) {
-      let respostaUser=inputElement.value.toLowerCase().replace(/\s/g, '')
+      let respostaUser=inputElement.value.toLowerCase().replace(/\s/g, '').substring(0, 49)
       if(respostaUser===solucoes[id].solution) {
         alert("right")
         window.location.href=solucoes[id].nextPage
